@@ -61,7 +61,7 @@ export default function () {
           <Route path="/replay/record/:roomUuid">
             <ReplayPage />
           </Route>
-          <Route exact path="/lecture/:roomName/:roomType/:userType">
+          <Route exact path="/session/:roomName/:roomType/:userType">
             <CustomHomePage />
           </Route>
           <Route exact path="/">
