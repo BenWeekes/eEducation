@@ -192,6 +192,7 @@ const en = {
     'cover_class': 'cover-en',
     'room_name': 'Room Name',
     'nickname': 'Your Name',
+    'join-as-guest': 'Type your name to join the session as a guest:',
     'room_type': 'Room Type',
     'room_join': 'Join',
     'short_title': {

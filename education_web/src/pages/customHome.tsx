@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useParams } from "react-router";
 import { Theme, FormControl, Tooltip } from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import {CustomButton} from '@/components/custom-button';
@@ -30,17 +31,10 @@ type SessionInfo = {
   role: string
 }
 
-const defaultState: SessionInfo = {
-  roomName: '',
-  roomType: 0,
-  role: '',
-  userName: '',
-}
-
 const roomTypes = isElectron ?  UIStore.roomTypes.filter((it: any) => it.value !== 3) : UIStore.roomTypes
 
 
-function HomePage() {
+function CustomHomePage() {
   document.title = t(`home.short_title.title`)
 
   const classes = useStyles();
@@ -50,6 +44,13 @@ function HomePage() {
   const uiStore = useUIStore();
 
   const appStore = useAppStore();
+let { roomName,roomType,userType }  = useParams<any>();
+const defaultState: SessionInfo = {
+  roomName: roomName,
+  roomType: roomType,
+  role:userType,
+  userName: '',
+}
 
   const handleSetting = (evt: any) => {
     history.push({pathname: '/setting'})
@@ -183,7 +184,7 @@ function HomePage() {
             }
           </div>
           <div className="position-content flex-direction-column">
-            <FormControl className={classes.formControl}>
+            {/* <FormControl className={classes.formControl}>
               <FormInput
                 alphabetical={true}
                 Label={t('home.room_name')}
@@ -198,11 +199,11 @@ function HomePage() {
                 }
                 requiredText={required.roomName}
               />
-            </FormControl>
+            </FormControl> */}
             <FormControl className={classes.formControl}>
               <FormInput
                 alphabetical={true}
-                Label={t('home.nickname')}
+                Label={t('home.join-as-guest')}
                 value={session.userName}
                 onChange={(val: string) => {
                   setSessionInfo({
@@ -210,10 +211,11 @@ function HomePage() {
                     userName: val
                   });
                 }}
+                shrinkLabel={true}
                 requiredText={required.userName}
               />
             </FormControl>
-            <FormControl className={classes.formControl}>
+            {/* <FormControl className={classes.formControl}>
               <FormSelect 
                 Label={t('home.room_type')}
                 value={session.roomType}
@@ -232,13 +234,13 @@ function HomePage() {
               />
             </FormControl>
             <FormControl className={classes.formControl}>
-              <RoleRadio value={session.role} type={session.roomType} onChange={(evt: any) => {
+              <RoleRadio value={session.role}  type={session.roomType} onChange={(evt: any) => {
                  setSessionInfo({
                    ...session,
                    role: evt.target.value
                  });
               }} requiredText={required.role}></RoleRadio>
-            </FormControl>
+            </FormControl> */}
             <CustomButton name={t('home.room_join')} onClick={handleSubmit}/>
           </div>
         </div>
@@ -246,4 +248,4 @@ function HomePage() {
     </div>
   )
 }
-export default React.memo(HomePage);
+export default React.memo(CustomHomePage);

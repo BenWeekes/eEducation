@@ -55,7 +55,7 @@ export const FormInput = (props: any) => {
   }
   return (
     <>
-      <InputLabel>{props.Label}</InputLabel>
+      <InputLabel shrink={props.shrinkLabel}>{props.Label}</InputLabel>
       <Input className={classes.formInput} value={props.value}
         onCompositionStart={onCompositionStart}
         onCompositionEnd={onCompositionEnd}
