@@ -15,16 +15,16 @@
   display: flex;
   min-width: 990px;
   background: #F5F7F8;
-  max-height: 122px;
-  min-height: 122px;
+  max-height: 190px;
+  min-height: 190px;
   align-items: flex-start;
   padding-top: 5px;
 
   .agora-video-view {
-    min-width: 187px;
-    min-height: 106px;
-    max-width: 187px;
-    max-height: 106px;
+    min-width: 320px;
+    min-height: 180px;
+    max-width: 320px;
+    max-height: 180px;
     border-radius: 2px;
     box-sizing: border-box;
     .student-placeholder,
@@ -33,18 +33,18 @@
       background-color: #DBE2E5;
       justify-content: center;
       box-sizing: border-box;
-      background-size: 66px;
-      min-width: 187px;
-      min-height: 82px;
-      max-width: 187px;
-      max-height: 82px;
+      background-size: 90px;
+      min-width: 320px;
+      min-height: 160px;
+      max-width: 320px;
+      max-height: 160px;
       border-radius: 2px;
       box-sizing: border-box;
       position: absolute;
     }
     .student-placeholder::before,
     .teacher-placeholder::before {
-      background-size: 63px;
+      background-size: 83px;
     }
   }
 }

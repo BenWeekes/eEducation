@@ -114,9 +114,7 @@ const defaultState: SessionInfo = {
       <div className="web-menu">
         <div className="web-menu-container">
           <div className="short-title">
-            <span className="title">{t('home.short_title.title')}</span>
-            <span className="subtitle">{t('home.short_title.subtitle')}</span>
-            <span className="build-version">{t("build_version")}</span>
+
           </div>
           <div className="setting-container">
             <div className="flex-row">

@@ -213,8 +213,8 @@ const en = {
   'room': {
     'show': 'Show',
     'course_list': 'Room List',
-    'chat_room': 'Chat Room',
-    'student_list': 'Student List',
+    'chat_room': 'Chat',
+    'student_list': 'Attendees',
     'uploading': 'Uploading...',
     'converting': 'Converting...',
     'upload_success': 'upload success',
