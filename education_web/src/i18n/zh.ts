@@ -191,6 +191,7 @@ const zhCN: any = {
     'cover_class': 'cover-cn',
     'room_name': '房间名',
     'nickname': '昵称',
+    'join-as-guest': '输入您的名字以访客身份加入会议',
     'room_type': '房间类型',
     'room_join': '加入房间',
     'short_title': {

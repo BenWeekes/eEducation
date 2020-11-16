@@ -192,6 +192,7 @@ const en = {
     'cover_class': 'cover-en',
     'room_name': 'Room Name',
     'nickname': 'Your Name',
+    'join-as-guest': 'Type your name to join the session as a guest:',
     'room_type': 'Room Type',
     'room_join': 'Join',
     'short_title': {
@@ -213,8 +214,8 @@ const en = {
   'room': {
     'show': 'Show',
     'course_list': 'Room List',
-    'chat_room': 'Chat Room',
-    'student_list': 'Student List',
+    'chat_room': 'Chat',
+    'student_list': 'Attendees',
     'uploading': 'Uploading...',
     'converting': 'Converting...',
     'upload_success': 'upload success',
