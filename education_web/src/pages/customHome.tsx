@@ -182,22 +182,7 @@ const defaultState: SessionInfo = {
             }
           </div>
           <div className="position-content flex-direction-column">
-            {/* <FormControl className={classes.formControl}>
-              <FormInput
-                alphabetical={true}
-                Label={t('home.room_name')}
-                value={session.roomName}
-                onChange={
-                  (val: string) => {
-                    setSessionInfo({
-                      ...session,
-                      roomName: val
-                    });
-                  }
-                }
-                requiredText={required.roomName}
-              />
-            </FormControl> */}
+
             <FormControl className={classes.formControl}>
 
             </FormControl>
@@ -206,6 +191,7 @@ const defaultState: SessionInfo = {
                 alphabetical={true}
                 Label={t('home.join-as-guest')}
                 value={session.userName}
+                autoFocus={true}
                 onChange={(val: string) => {
                   setSessionInfo({
                     ...session,
@@ -215,32 +201,7 @@ const defaultState: SessionInfo = {
                 shrinkLabel={false}
                 requiredText={required.userName}
               />
-            {/* <FormControl className={classes.formControl}>
-              <FormSelect 
-                Label={t('home.room_type')}
-                value={session.roomType}
-                onChange={(evt: any) => {
-                  setSessionInfo({
-                    ...session,
-                    roomType: evt.target.value
-                  });
-                }}
-                items={roomTypes
-                  .map((it: any) => ({
-                  value: it.value,
-                  text: t(`${it.text}`),
-                  path: it.path
-                }))}
-              />
-            </FormControl>
-            <FormControl className={classes.formControl}>
-              <RoleRadio value={session.role}  type={session.roomType} onChange={(evt: any) => {
-                 setSessionInfo({
-                   ...session,
-                   role: evt.target.value
-                 });
-              }} requiredText={required.role}></RoleRadio>
-            </FormControl> */}
+
             <CustomButton name={t('home.room_join')} onClick={handleSubmit}/>
           </div>
         </div>
