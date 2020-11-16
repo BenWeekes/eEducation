@@ -2,6 +2,8 @@ import React from 'react';
 import { Route, HashRouter } from 'react-router-dom';
 import ThemeContainer from '../containers/theme-container';
 import Home from './home';
+import CustomHomePage from './customHome';
+
 import {DeviceDetectPage} from './device-detect/index';
 import { RoomPage } from './classroom';
 import Loading from '../components/loading';
@@ -60,7 +62,7 @@ export default function () {
             <ReplayPage />
           </Route>
           <Route exact path="/lecture/:roomName/:roomType/:userType">
-            <Home />
+            <CustomHomePage />
           </Route>
           <Route exact path="/">
             <Home />
