@@ -164,35 +164,22 @@ export const Nav = observer((props: any) => {
       <div className={`nav-container ${isElectron ? 'draggable' : ''}`}>
         <div className="class-title">
           <span className="room-name">{roomName}</span>
-          {role === 'teacher' ?
-            <StartClassButton isBreakout={isBreakout} /> : null}
+        
         </div>
         <div className="network-state">
           <div>
             {
               !isCourses ?
                 <div className="nav-information">
-                  <span>
-                    {uiStore.isWeb ? <span className="net-field">{t('nav.delay')}<span className="net-field-value">{delay}</span></span> : null}
-                  </span>
+
                   {/* <span className="net-field">Packet Loss Rate: <span className="net-field-value">{lossPacket}</span></span> */}
                   <span className="net-field net-field-container">
                     {t('nav.network')}
                     <span className={`net-field-value ${networkQualityIcon[network]}`} style={{ marginLeft: '.2rem' }}>
                     </span>
                   </span>
-                  <span className="net-field net-field-container">
-                    curSeqId
-                    <span className={`net-field-value`} style={{ marginLeft: '.2rem' }}>
-                      {uiStore.curSeqId}
-                    </span>
-                  </span>
-                  <span className="net-field net-field-container">
-                    lastSeqId
-                    <span className={`net-field-value`} style={{ marginLeft: '.2rem' }}>
-                      {uiStore.lastSeqId}
-                    </span>
-                  </span>
+
+
                   {uiStore.isElectron ? <span className="net-field">{t('nav.cpu')}<span className="net-field-value">{cpu}%</span></span> : null}
                 </div> : null}
           </div>
@@ -200,8 +187,8 @@ export const Nav = observer((props: any) => {
         <div className="menu">
           <>
           <div className="timer">
-            <CustomIcon className="icon-time" disable />
-            <span className="time">{moment.utc(time).format('HH:mm:ss')}</span>
+    
+
           </div>
           <span className="menu-split" />
           </>
